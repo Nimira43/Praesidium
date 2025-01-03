@@ -216,3 +216,25 @@ ul {
 .loading-center {
   margin: 0 auto;
 }
+
+.title {
+  text-align: center;
+}
+
+.title-underline {
+  background: var(--primary);
+  width: 7rem;
+  height: 0.25rem;
+  margin: 0 auto;
+  margin-top: -1rem;
+}
+
+.container {
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.full-page {
+  min-height: 100vh;
+}
