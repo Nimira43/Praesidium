@@ -197,3 +197,22 @@ ul {
   letter-spacing: var(--letter-spacing);
   text-transform: capitalize;
 }
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 5px solid var(--grey-md);
+  border-radius: 50%;
+  border-top-color: var(--primary);
+  animation: spinner 2s linear infinite;
+}
+
+.loading-center {
+  margin: 0 auto;
+}
