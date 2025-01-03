@@ -1,6 +1,6 @@
 import Landing from './pages/Landing'
 
-function App() {
+const App = () => {
   return (
     <div>
       <Landing />
