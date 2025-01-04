@@ -39,6 +39,21 @@ const UserSchema = new mongoose.Schema({
     // default: "https://cdn.pixabay.com/photo/2018/11/13/21/43/avatar-3814049_960_720.png",
     default: "../../public/user.png",
   },
+  role: {
+    type: String,
+    enum: ['Subscriber', 'Admin', 'Free User', 'Influencer']
+  },
+  isSubscribed: {
+    type: String
+  },
+  saved: {
+    type: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Product',
+      }
+    ]
+  }
 }, {
   toJSON: {virtuals: true},
   toObject: {virtuals: true},
