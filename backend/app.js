@@ -9,6 +9,7 @@ const cors = require('cors')
 dotenv.config()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+app.use(cookieparser())
 app.use(cors({origin: true, credentials: true}))
 
 app.get('/', (req, res) => {
