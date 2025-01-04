@@ -3,8 +3,11 @@ const app = express()
 const dotenv = require('dotenv')
 const PORT = 5000
 const dbconnection = require('./config/DBconnection.js')
+const cookieparser = require('cookie-parser')
+const cors = require('cors')
 
 dotenv.config()
+app.use(cors({origin: true, credentials: true}))
 
 app.get('/', (req, res) => {
   res.send('Praesidium')
